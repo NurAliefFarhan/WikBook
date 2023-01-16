@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Login Form</title>
+    <title>Register Form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -17,10 +17,25 @@
                 <div class="img-left d-none d-md-flex"></div>
                 <div class="card-body">
                     <h4 class="title text-center mt-4">Register into account</h4>
-                    <form class="form-box px-3" action="">
+                    <form class="form-box px-3" method="POST" action="{{route('register.post')}}">
+                        @csrf
+                        @if ($errors->any())
+                        {{-- alert kalau tidak di isi, akan muncul alert denger  --}}
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif 
+
+
+
+
                         <div class="form-input">
                             <span><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" name="name" placeholder="Nama Lengkap" tabindex="10" required>
+                            <input type="text" name="nama" placeholder="Nama Lengkap" tabindex="10" required>
                         </div>
 
                         <div class="form-input">

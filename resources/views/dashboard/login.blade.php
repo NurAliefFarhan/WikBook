@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Login Form</title>
     <meta charset="utf-8">
@@ -19,7 +18,35 @@
                     <h4 class="title text-center mt-4">
                         Login into account
                     </h4>
-                    <form class="form-box px-3">
+                    <form class="form-box px-3" method="POST" action="{{route('login.auth')}}">
+                        @csrf
+                        @if ($errors->any())
+                        {{-- alert kalau tidak di isi, akan muncul alert denger  --}}
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif 
+
+                        @if(Session::get('success'))
+                            <div class="alert alert-success w-70">
+                                {{Session::get('success')}} 
+                            </div>
+                        @endif
+
+
+                          <!-- fail, jika gagal login --> 
+                        @if(Session::get('loginFail'))
+                            <div class="alert alert-danger w-70">
+                                {{Session::get('loginFail')}} 
+                            </div>
+                        @endif
+
+
+
                         <div class="form-input">
                             <span><i class="fa fa-envelope-o"></i></span>
                             <input type="email" name="email" placeholder="Email Address" tabindex="10" required>

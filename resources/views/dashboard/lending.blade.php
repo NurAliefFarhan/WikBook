@@ -128,7 +128,6 @@
                       Cerita berfokus pada karakter Lail, gadis berusia 13 tahun, yang pada hari pertamanya di sekolah harus mengalami bencana gunung meletus dan gempa dahsyat. Bencana ini mnegahancurkan kota tempat tinggalnya serta merenggut nyawa kedua orangtuanya.                    </p>
                   </div>
                 </li>
-
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Bumi<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
@@ -136,12 +135,9 @@
                       Novel Bumi Tere Liye menceritakan petualangan tiga remaja berusia 15 tahun bernama Raib, Ali, dan Seli. Mereka digambarkan sebagai remaja dengan kekuatan khusus.                    </p>
                   </div>
                 </li>
-
               </ul>
             </div>
-
           </div>
-
           <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/tereliye_bulan.jpeg");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 

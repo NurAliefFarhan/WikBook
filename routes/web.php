@@ -23,5 +23,9 @@ use App\Http\Controllers\LibraryController;
 
 Route::get('/', [LibraryController::class, 'lending'])->name('lending');
 Route::get('/login', [LibraryController::class, 'login'])->name('login');
+Route::post('/login', [LibraryController::class, 'auth'])->name('login.auth');
 Route::get('/register', [LibraryController::class, 'register'])->name('register');
+Route::post('/register', [LibraryController::class, 'inputRegister'])->name('register.post'); 
+
+Route::get('/dashboard/user', [LibraryController::class, 'user'])->name('user'); //dashboard user 
 

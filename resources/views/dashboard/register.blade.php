@@ -1,62 +1,90 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
+    <title>Login Form</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register Form</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
 </head>
 <body>
-    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-        <div class="container">
-            <div class="card login-card">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="{{asset('assets/img/login.jpeg')}}" class="login-card-img" style="width: 100%; height: 100%;">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <p class="login-card-description">Sign up your account</p>
-                            <form action="#!">
-                                <div class="form-group">
-                                    <label for="nama" class="sr-only">Nama</label>
-                                    <input type="integer" name="nama" id="email" class="form-control" placeholder="Nama Lengkap">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="sr-only">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email adress">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Kota" class="sr-only">Kota</label>
-                                    <input type="kota" name="Kota" id="Kota" class="form-control" placeholder="Kota anda">
-                                </div>
-                                <div class="form-group">
-                                    <label for="No.Handphone" class="sr-only">No.Handphone</label>
-                                    <input type="integer" name="No.Handphone" id="No.Handphone" class="form-control" placeholder="No. Handphone">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="Password" class="sr-only">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                                </div>
-                                <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
-                            </form>
-                            <p class="login-card-footer-text">Don't have an account? <a href="/login"class="text-reset">Login here</a></p>
-                            <nav class="login-card-footer-nav">
-                                <a href="#!">Terms of use.</a>
-                                <a href="#!">Privacy policy</a>
-                            </nav>
+    <div class="container">
+        <div class="row px-3">
+            <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+                <div class="img-left d-none d-md-flex"></div>
+                <div class="card-body">
+                    <h4 class="title text-center mt-4">
+                        Login into account
+                    </h4>
+                    <form class="form-box px-3">
+                        <div class="form-input">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                            <input type="email" name="" placeholder="Email Address" tabindex="10" required>
                         </div>
-                    </div>
+                        <div class="form-input">
+                            <span><i class="fa fa-key"></i></span>
+                            <input type="password" name="" placeholder="Password" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                                <label class="custom-control-label" for="cb1">Remember me</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-block text-uppercase">
+                                Login
+                            </button>
+                        </div>
+
+                        <div class="text-right">
+                            <a href="#" class="forget-link">
+                                Forget Password?
+                            </a>
+                        </div>
+
+                        <div class="text-center mb-3">
+                            or login with
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <a href="#" class="btn btn-block btn-social btn-facebook">
+                                    facebook
+                                </a>
+                            </div>
+
+                            <div class="col-4">
+                                <a href="#" class="btn btn-block btn-social btn-google">
+                                    google
+                                </a>
+                            </div>
+
+                            <div class="col-4">
+                                <a href="#" class="btn btn-block btn-social btn-twitter">
+                                    twitter
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="text-center mb-2">
+                            Don't have an account?
+                            <a href="#" class="register-link">
+                                Register here
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </main>
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </div>
 </body>
 
 </html>

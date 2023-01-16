@@ -21,7 +21,7 @@ use App\Http\Controllers\LibraryController;
 
 
 
-Route::get('/lending', [LibraryController::class, 'lending'])->name('lending');
+Route::get('/', [LibraryController::class, 'lending'])->name('lending');
 Route::get('/login', [LibraryController::class, 'login'])->name('login');
 Route::get('/register', [LibraryController::class, 'register'])->name('register');
 

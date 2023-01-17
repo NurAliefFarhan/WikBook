@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('layout-login')
+@section('content')
 
-<head>
-    <title>Register Form</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
-</head>
-<body>
     <div class="container">
         <div class="row px-3">
             <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
@@ -34,7 +24,7 @@
 
 
                         <div class="form-input">
-                            <span><i class="fa fa-envelope-o"></i></span>
+                            <span><i class="fa fa-user"></i></span>
                             <input type="text" name="nama" placeholder="Nama Lengkap" tabindex="10" required>
                         </div>
 
@@ -44,12 +34,12 @@
                         </div>
 
                         <div class="form-input">
-                            <span><i class="fa fa-envelope-o"></i></span>
+                            <span><i class="fa-solid fa-map-location-dot"></i></span>
                             <input type="text" name="kota" placeholder="Asal Kota" tabindex="10" required>
                         </div>
 
                         <div class="form-input">
-                            <span><i class="fa fa-envelope-o"></i></span>
+                            <span><i class="fa-solid fa-phone"></i></span>
                             <input type="number" name="nohp" placeholder="No.Handphone" tabindex="10" required>
                         </div>
 
@@ -59,19 +49,19 @@
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-block text-uppercase">Login</button>
+                            <button type="submit" class="btn btn-block text-uppercase">Register</button>
                         </div>
                         <hr class="my-4">
 
                         <div class="text-center mb-2">
                             Don't have an account?
-                            <a href="/login" class="register-link">Register here</a>
+                            <a href="/login" class="register-link">Login here</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</body>
 
-</html>
+    
+@endsection 

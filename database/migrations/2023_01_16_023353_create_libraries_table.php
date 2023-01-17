@@ -15,6 +15,17 @@ return new class extends Migration
     {
         Schema::create('libraries', function (Blueprint $table) {
             $table->id();
+            $table->text('category');
+            $table->string('title');
+            $table->string('writer');
+            $table->string('publisher');
+            $table->string('isbn');
+            $table->string('synopsis');
+            $table->string('categoryBook');
+            $table->string('file');
+            $table->boolean('status');
+            $table->date('return_date')->nullable(); 
+            $table->date('done_time')->nullable(); 
             $table->timestamps();
         });
     }

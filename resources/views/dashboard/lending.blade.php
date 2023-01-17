@@ -4,6 +4,7 @@
  
 
 
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -20,12 +21,30 @@
     </div>
   </header><!-- End Header -->
 
+
+
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- ======= Alert Session ======= -->
+        <div class="alert" style="margin-top: 12%">
+
+          {{-- Alert untuk sessionnya  --}}
+            @if(Session::get('successLogout'))
+            <div class="alert alert-success w-70">
+                {{Session::get('successLogout')}} 
+            </div>
+            @endif
+
+
+        </div>
+
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-0 pt-lg-0 order-2 order-lg-0" data-aos="fade-up" data-aos-delay="200" style="margin-bottom: 20%;">
           <h1>Better Solutions For Your Choice Book</h1>
           <h2>We can access book for online and free!</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
@@ -76,7 +95,8 @@
         </div>
 
       </div>
-    </section><!-- End Cliens Section -->
+    </section>
+    <!-- End Cliens Section -->
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">

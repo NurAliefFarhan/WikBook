@@ -430,7 +430,7 @@
                                                                         <label for="sekolah" class="small text-muted mb-1">Category Book</label>
                                                                         <select name="categoryBook" class="select2 form-control w-100 ml-0" aria-describedy="helpId" onchange='checkvalue(this.value)'>
                                                                             <option hidden disabled selected>--Pilih Category Book--</option>
-                                                                            <option value="Novel">Novel</option>
+                                                                            <option value="Novel">Novel</option> 
                                                                         </select>
                                                                     </div>
                                                                 </div>

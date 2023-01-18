@@ -568,13 +568,13 @@
                                                 <th>Category Name</th>
                                                 <th>Action</th>
                                             </tr>
-                                            @foreach ($libraries as $library)
+                                            @foreach ($category as $category)
                                             <tr>
-                                                <th>{{$library->id}}</th>
-                                                <th>{{$library->id}}</th>
-                                                <th>{{$library->category}}</th>
+                                                <th>{{$category->id}}</th>
+                                                <th>{{$category->id}}</th>
+                                                <th>{{$category->category}}</th>
                                                 <th>
-                                                     <form action="{{route('delete', $library['id'])}}" method="POST">
+                                                     <form action="{{route('delete', $category['id'])}}" method="POST">
                                                         @csrf 
                                                         @method('DELETE') 
                                                         <button class="text-danger btn"><i class="fa-solid fa-trash"></i></button>

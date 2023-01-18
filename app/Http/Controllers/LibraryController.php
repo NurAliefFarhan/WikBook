@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Library;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon; 
@@ -119,7 +120,7 @@ class LibraryController extends Controller
     public function inputBook(Request $request)
     {
         $request->validate([
-            'title' => 'required|min:5|max:20',
+            'title' => 'required|min:5',
             'writer' => 'required|min:5|max:20',
             'publisher' => 'required|min:5|max:20',
             'isbn' => 'required|min:15|max:17',
@@ -146,8 +147,8 @@ class LibraryController extends Controller
 
     public function category()
     {
-        $libraries = Library::all(); 
-        return view('dashboardAdmin.category', compact('libraries'));
+        $category = Category::all(); 
+        return view('dashboardAdmin.category', compact('category'));
     }
 
     public function inputCategory(Request $request)
@@ -156,7 +157,7 @@ class LibraryController extends Controller
             'category' => 'required|min:5|max:12',
         ]);
         // tambah data ke db bagian table users
-        Library::create([
+        Category::create([
             'category' => $request->category,
             'status' => 0, 
             // 'password' => Hash::make($request->password), //request password itu adalah password  
@@ -166,7 +167,7 @@ class LibraryController extends Controller
 
     public function categoryDestroy($id)
     {
-        Library::where('id', '=', $id)->delete(); 
+        Category::where('id', '=', $id)->delete(); 
         return redirect()->route('category')->with('successDelete', 'Berhasil menghapus data account'); 
 
     }

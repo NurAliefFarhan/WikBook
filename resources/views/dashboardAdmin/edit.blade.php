@@ -7,7 +7,7 @@
                 <div class="img-left d-none d-md-flex"></div>
                 <div class="card-body">
                     <h4 class="title text-center mt-4">Edit account</h4>
-                    <form class="form-box px-3" method="POST" action="{{route('update', $user['id'])}}">
+                    <form class="form-box px-3" method="POST" action="{{route('wikbook.update', $user['id'])}}">
                         @csrf
                         @method('PATCH')
                         @if ($errors->any())
@@ -53,7 +53,7 @@
                             <button type="submit" class="btn btn-block text-uppercase">Update</button>
                         </div>
                         <div class="mb-3">
-                            <a href="/dashboardAdmin/userAdmin" class="btn btn-primary">Back</a>
+                            <a href="/wikbook/dashboardAdmin/userAdmin" class="btn btn-primary">Back</a>
                         </div>
                         <hr class="my-4">
 

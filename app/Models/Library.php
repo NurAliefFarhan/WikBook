@@ -9,14 +9,13 @@ class Library extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'category',
         'title',
         'writer',
         'publisher',
         'isbn',
         'categoryBook',
         'synopsis',
-        'file',
+        'image',
         'status',
         'done_time',
         'user_id',

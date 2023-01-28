@@ -36,6 +36,12 @@
                             </div>
                         @endif
 
+                         {{-- disesuaikan dengan halaman Middleware, sehingga harus login untuk akses perpus, tidak bisa http://127.0.0.1:8000/dashboardUser/user --}}
+                        @if(Session::get('notAllowed'))
+                            <div class="alert alert-danger w-70">
+                                {{Session::get('notAllowed')}} 
+                            </div>
+                        @endif
 
 
                         <div class="form-input">

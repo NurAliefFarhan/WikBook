@@ -7,7 +7,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/wikbook/dashboardAdmin/admin">
                 <div class="sidebar-brand-icon">
                     {{-- <i class="fas fa-laugh-wink"></i>  --}} 
                     {{-- <img src="{{asset("assets/img/buku.png")}}" width="50" height="50"> --}}
@@ -22,20 +22,20 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/admin"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/admin"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/userAdmin"><i class="fa-regular fa-user"></i><span>User</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/userAdmin"><i class="fa-regular fa-user"></i><span>User</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/book"><i class="fa-solid fa-book"></i><span>Book</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/book"><i class="fa-solid fa-book"></i><span>Book</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="/dashboardAdmin/category"><i class="fa-regular fa-bookmark"></i><span>Category Book</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/category"><i class="fa-regular fa-bookmark"></i><span>Category Book</span></a>
             </li>
             <!-- Divider -->
             {{-- <hr class="sidebar-divider"> --}}
@@ -139,7 +139,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <!-- <form
+                    {{-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -150,7 +150,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form> -->
+                    </form>  --}}
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -405,7 +405,7 @@
                                                         <hr class="my-0">
                                                     </div>
 
-                                                    <form action="{{route('category.post')}}" method="POST">
+                                                    <form action="{{route('wikbook.category.post')}}" method="POST">
                                                         @csrf 
 
                                                         <div class="card-body">
@@ -555,6 +555,18 @@
                                     <div class="card-header">
                                         <div class="row">
                                             <div class="col"><b>WikBook Data</b></div>
+
+                                            {{-- <form action="{{route('category')}}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control bg-light border-0 medium mt-1" placeholder="Search category..." aria-label="Search" aria-describedby="basic-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="submit">
+                                                            <i class="fas fa-search fa-sm"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form> --}}
+
                                         </div>
                                     </div>
                                     <div class="col">
@@ -570,11 +582,11 @@
                                             </tr>
                                             @foreach ($category as $category)
                                             <tr>
-                                                <th>{{$category->id}}</th>
+                                                <th>{{++$no}}</th>
                                                 <th>{{$category->id}}</th>
                                                 <th>{{$category->category}}</th>
                                                 <th>
-                                                     <form action="{{route('delete', $category['id'])}}" method="POST">
+                                                     <form action="{{route('wikbook.delete', $category['id'])}}" method="POST">
                                                         @csrf 
                                                         @method('DELETE') 
                                                         <button class="text-danger btn"><i class="fa-solid fa-trash"></i></button>

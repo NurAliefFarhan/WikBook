@@ -7,7 +7,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/wikbook/dashboardAdmin/admin">
                 <div class="sidebar-brand-icon">
                     {{-- <i class="fas fa-laugh-wink"></i>  --}} 
                     {{-- <img src="{{asset("assets/img/buku.png")}}" width="50" height="50"> --}}
@@ -22,20 +22,20 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/dashboardAdmin/admin"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/admin"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/userAdmin"><i class="fa-regular fa-user"></i><span>User</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/userAdmin"><i class="fa-regular fa-user"></i><span>User</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/book"><i class="fa-solid fa-book"></i><span>Book</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/book"><i class="fa-solid fa-book"></i><span>Book</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/dashboardAdmin/category"><i class="fa-regular fa-bookmark"></i><span>Category Book</span></a>
+                <a class="nav-link" href="/wikbook/dashboardAdmin/category"><i class="fa-regular fa-bookmark"></i><span>Category Book</span></a>
             </li>
             <!-- Divider -->
             {{-- <hr class="sidebar-divider"> --}}

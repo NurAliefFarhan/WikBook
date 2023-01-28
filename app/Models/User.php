@@ -25,7 +25,6 @@ class User extends Authenticatable
         'nohp',
         'status',
         'password',
-        'role',
         'return_date',
         'done_time',
     ];
